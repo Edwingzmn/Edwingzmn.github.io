@@ -151,6 +151,12 @@ footer {
   font-size: 16px;
 }
 
+.column2 img{
+  width: 30px;
+  height: 30px;
+  margin: 0 10px 10px 0;
+}
+
 .column3 {
   max-width: 400px;
 }
