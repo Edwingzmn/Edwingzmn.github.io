@@ -3,3 +3,14 @@
     left: 50%;
     transform: translatex(-50%);
 }
+
+.contacto{
+    border: rgb(2, 2, 75) 1px solid;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: rgba(182, 181, 181, 0.137);
+}
+
+iframe{
+    border-radius: 10px;
+}
