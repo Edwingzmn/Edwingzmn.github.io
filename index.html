@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio - Ingeniero en Sistemas Computacionales</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -17,53 +20,62 @@
             </ul>
         </nav>
         <div class="hero" id="home">
-            <h1>Ingeniero en Sistemas Computacionales</h1>
-            <p>Reparación de computadoras, celulares, instalación de redes y cámaras CCTV</p>
+            <div class="hero-content">
+                <h1>Ingeniero en Sistemas Computacionales</h1>
+                <p>Reparación de computadoras, celulares, instalación de redes y cámaras CCTV</p>
+                <a href="#contact" class="btn">Contáctame</a>
+            </div>
         </div>
     </header>
 
-    <section id="about">
-        <h2>Acerca de mí</h2>
-        <p>Soy un profesional con años de experiencia en la ingeniería de sistemas computacionales. Mi pasión es ayudar a las personas y empresas a resolver sus problemas tecnológicos.</p>
-    </section>
+    <main>
+        <section id="about">
+            <h2>Acerca de mí</h2>
+            <p>Soy un profesional con años de experiencia en la ingeniería de sistemas computacionales. Mi pasión es ayudar a las personas y empresas a resolver sus problemas tecnológicos.</p>
+        </section>
 
-    <section id="services">
-        <h2>Servicios</h2>
-        <div class="services-container">
-            <div class="service">
-                <h3>Reparación de Computadoras</h3>
-                <p>Solución de problemas de hardware y software en computadoras de escritorio y portátiles.</p>
+        <section id="services">
+            <h2>Servicios</h2>
+            <div class="services-container">
+                <div class="service">
+                    <div class="service-icon">&#128187;</div>
+                    <h3>Reparación de Computadoras</h3>
+                    <p>Solución de problemas de hardware y software en computadoras de escritorio y portátiles.</p>
+                </div>
+                <div class="service">
+                    <div class="service-icon">&#128241;</div>
+                    <h3>Reparación de Celulares</h3>
+                    <p>Diagnóstico y reparación de dispositivos móviles de diversas marcas.</p>
+                </div>
+                <div class="service">
+                    <div class="service-icon">&#128202;</div>
+                    <h3>Instalación y Configuración de Redes</h3>
+                    <p>Instalación de redes inalámbricas y cableadas para hogares y oficinas.</p>
+                </div>
+                <div class="service">
+                    <div class="service-icon">&#128250;</div>
+                    <h3>Instalación de Cámaras CCTV</h3>
+                    <p>Instalación de sistemas de videovigilancia para mejorar la seguridad de sus instalaciones.</p>
+                </div>
             </div>
-            <div class="service">
-                <h3>Reparación de Celulares</h3>
-                <p>Diagnóstico y reparación de dispositivos móviles de diversas marcas.</p>
-            </div>
-            <div class="service">
-                <h3>Instalación y Configuración de Redes</h3>
-                <p>Instalación de redes inalámbricas y cableadas para hogares y oficinas.</p>
-            </div>
-            <div class="service">
-                <h3>Instalación de Cámaras CCTV</h3>
-                <p>Instalación de sistemas de videovigilancia para mejorar la seguridad de sus instalaciones.</p>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="contact">
-        <h2>Contacto</h2>
-        <form id="contactForm">
-            <label for="name">Nombre:</label>
-            <input type="text" id="name" name="name" required>
+        <section id="contact">
+            <h2>Contacto</h2>
+            <form id="contactForm">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required>
 
-            <label for="email">Correo Electrónico:</label>
-            <input type="email" id="email" name="email" required>
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required>
 
-            <label for="message">Mensaje:</label>
-            <textarea id="message" name="message" required></textarea>
+                <label for="message">Mensaje:</label>
+                <textarea id="message" name="message" required></textarea>
 
-            <button type="submit">Enviar</button>
-        </form>
-    </section>
+                <button type="submit" class="btn">Enviar</button>
+            </form>
+        </section>
+    </main>
 
     <footer>
         <p>&copy; 2024 Ingeniero en Sistemas Computacionales. Todos los derechos reservados.</p>

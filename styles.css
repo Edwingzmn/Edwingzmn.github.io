@@ -1,16 +1,24 @@
 /* Estilos generales */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
+    background-color: #f9f9f9;
     color: #333;
+    line-height: 1.6;
 }
 
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px 0;
+    position: relative;
+}
+
+nav {
+    background-color: #282c34;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 nav ul {
@@ -22,76 +30,184 @@ nav ul {
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 0 20px;
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
-    font-weight: bold;
+    padding: 20px;
+    display: block;
+    font-weight: 600;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #61dafb;
 }
 
 .hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    padding: 50px 20px;
-    background: url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
+    padding: 100px 20px;
+    background: linear-gradient(to right, rgba(40, 44, 52, 0.8), rgba(40, 44, 52, 0.8)), url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
+    color: #fff;
+    height: 100vh;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #61dafb;
+    color: #282c34;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: #282c34;
+    color: #61dafb;
 }
 
 section {
-    padding: 50px 20px;
+    padding: 60px 20px;
     background-color: #fff;
-    margin: 20px 0;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+#about p, #services p, #contact p {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2em;
+    color: #282c34;
 }
 
 .services-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .service {
-    flex: 0 0 45%;
-    background-color: #f9f9f9;
-    margin: 10px;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #f1f1f1;
+    margin: 20px;
+    padding: 30px;
+    border-radius: 10px;
+    flex: 1 1 calc(50% - 40px);
+    max-width: calc(50% - 40px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    text-align: center;
+}
+
+.service:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.service-icon {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    color: #61dafb;
+}
+
+.service h3 {
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    color: #333;
 }
 
 form {
-    max-width: 500px;
+    max-width: 600px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 form label {
     margin: 10px 0 5px;
+    width: 100%;
+    font-weight: 600;
+    color: #282c34;
 }
 
 form input, form textarea {
-    padding: 10px;
-    margin-bottom: 15px;
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    font-size: 1em;
+    font-family: 'Montserrat', sans-serif;
 }
 
 form button {
-    padding: 10px;
-    background-color: #333;
+    padding: 15px 30px;
+    background-color: #61dafb;
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 form button:hover {
-    background-color: #555;
+    background-color: #fff;
+    color: #61dafb;
+    border: 1px solid #61dafb;
 }
 
 footer {
-    background-color: #333;
+    background-color: #282c34;
     color: #fff;
     text-align: center;
-    padding: 10px 0;
+    padding: 20px 0;
+    position: relative;
+}
+
+footer p {
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .service {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav ul li {
+        margin: 10px 0;
+    }
 }
