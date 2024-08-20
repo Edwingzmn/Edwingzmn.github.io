@@ -52,13 +52,18 @@ nav ul li a:hover {
     justify-content: center;
     text-align: center;
     padding: 100px 20px;
-    background: linear-gradient(to right, rgba(40, 44, 52, 0.8), rgba(40, 44, 52, 0.8)), url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
+    background: linear-gradient(to right, rgba(40, 44, 52, 0.8), rgba(40, 44, 52, 0.8)), url('/src/background.jpg') no-repeat center center/cover;
     color: #fff;
     height: 100vh;
 }
 
 .hero-content {
     max-width: 800px;
+}
+
+.hero-content img{
+    width: 300px;
+    border-radius: 15px;
 }
 
 .hero h1 {
@@ -140,6 +145,36 @@ h2 {
     margin-bottom: 15px;
     font-size: 1.5em;
     color: #333;
+}
+
+.service-icon:nth-child(5) {
+    color: #ff6f61; /* Cambia el color del icono de Desarrollo Web si lo deseas */
+}
+
+#titulo {
+    font-size: 3em; /* Ajusta según tu diseño */
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif; /* Asegúrate de que sea la misma fuente */
+    color: #ffffff; /* O el color que uses en tu h1 */
+    display: inline;
+}
+
+#cursor {
+    font-size: 3em; /* Mismo tamaño que el h1 */
+    font-weight: bold; /* Mismo peso que el h1 */
+    font-family: 'Montserrat', sans-serif; /* Mismo tipo de letra */
+    color: #ffffff; /* Mismo color que el h1 */
+    display: inline;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    from, to {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
 }
 
 form {

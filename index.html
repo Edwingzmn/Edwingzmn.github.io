@@ -21,8 +21,9 @@
         </nav>
         <div class="hero" id="home">
             <div class="hero-content">
-                <h1>Ingeniero en Sistemas Computacionales</h1>
-                <p>Reparación de computadoras, celulares, instalación de redes y cámaras CCTV</p>
+                <img src="/src/avatar.jpg"><br>
+                <h1 id="titulo" style="display: inline;"></h1><span id="cursor" style="display: inline;">|</span>
+                <p>Desarrollo web, reparación de computadoras, celulares, instalación de redes y cámaras CCTV</p>
                 <a href="#contact" class="btn">Contáctame</a>
             </div>
         </div>
@@ -37,6 +38,11 @@
         <section id="services">
             <h2>Servicios</h2>
             <div class="services-container">
+                <div class="service">
+                    <div class="service-icon">&#128640;</div>
+                    <h3>Desarrollo Web</h3>
+                    <p>Creación de sitios web modernos, responsivos y optimizados para el rendimiento.</p>
+                </div>
                 <div class="service">
                     <div class="service-icon">&#128187;</div>
                     <h3>Reparación de Computadoras</h3>
@@ -59,19 +65,20 @@
                 </div>
             </div>
         </section>
+        
 
         <section id="contact">
             <h2>Contacto</h2>
-            <form id="contactForm">
+            <form id="contactForm" onsubmit="enviarPorWhatsApp(event)">
                 <label for="name">Nombre:</label>
                 <input type="text" id="name" name="name" required>
-
+        
                 <label for="email">Correo Electrónico:</label>
                 <input type="email" id="email" name="email" required>
-
+        
                 <label for="message">Mensaje:</label>
                 <textarea id="message" name="message" required></textarea>
-
+        
                 <button type="submit" class="btn">Enviar</button>
             </form>
         </section>
